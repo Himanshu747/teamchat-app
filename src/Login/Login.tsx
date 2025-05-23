@@ -1,10 +1,10 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
-import AppLink from "../components/AppLink/AppLink";
-import InputField from "../components/Input/InputField";
-import Button from "../components/Button/Button";
-import { ButtonType } from "../components/Button/ButtonType";
-import Form from "../components/Form/Form";
+import AppLink from "../components/UIComponents/AppLink/AppLink";
+import InputField from "../components/UIComponents/Input/InputField";
+import Button from "../components/UIComponents/Button/Button";
+import { ButtonType } from "../components/UIComponents/Button/ButtonType";
+import Form from "../components/UIComponents/Form/Form";
 interface LoginFormData {
     userName: string;
     passWord: string;
@@ -43,7 +43,6 @@ const Login:React.FC=()=>{
                         <div className="p-5">
                             <div className="p-4">
                                  <Form onSubmit={submitData}>
-                    
                                     <div className="mb-5">
                                         <InputField
                                                     type='text'
@@ -80,9 +79,7 @@ const Login:React.FC=()=>{
                     
                                     <div className="grid">
                                         <Button type={ButtonType.Submit} className="py-2 text-white border-transparent btn bg-violet-500 hover:bg-violet-600 text-16" buttonText='Sign in'/>
-                                       
                                     </div>
-                    
                                 </Form>
                             </div>
                         </div>

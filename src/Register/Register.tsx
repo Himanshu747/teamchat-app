@@ -1,10 +1,10 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import InputField from '../components/Input/InputField';
-import AppLink from '../components/AppLink/AppLink';
-import Button from '../components/Button/Button';
-import { ButtonType } from '../components/Button/ButtonType';
-import Form from '../components/Form/Form';
+import InputField from '../components/UIComponents/Input/InputField';
+import AppLink from '../components/UIComponents/AppLink/AppLink';
+import Button from '../components/UIComponents/Button/Button';
+import { ButtonType } from '../components/UIComponents/Button/ButtonType';
+import Form from '../components/UIComponents/Form/Form';
 
 interface FormData {
     firstName: string;
