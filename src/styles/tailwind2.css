@@ -58,7 +58,9 @@
 	width: 100%;
 	cursor: auto;
 }
-
+.cursor-pointer{
+	cursor:pointer;
+}
 .mfp-ajax-cur {
 	cursor: progress;
 }
