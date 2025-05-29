@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Tab from "./Tab";
 import { Sidebar, sidebarNav } from "./SidebarData/sidebar";
 import Profile from "../../Profile/Profile";
+import Group from "../../Groups/Group";
 
 const Tabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -34,8 +35,10 @@ const Tabs: React.FC = () => {
       <div className="chat-leftsidebar lg:w-[380px] group-data-[theme-color=violet]:bg-slate-50 group-data-[theme-color=green]:bg-green-50/20 group-data-[theme-color=red]:bg-red-50/20 shadow overflow-y-hidden mb-[80px] lg:mb-0 group-data-[theme-color=violet]:dark:bg-zinc-700 group-data-[theme-color=green]:dark:bg-zinc-700 group-data-[theme-color=red]:dark:bg-zinc-700">
         <div>
           <Profile activeTab={activeTab == 1 ? "active" : ""} />
+          
         </div>
-        Tab {activeTab} is Active
+        <Group activeTab={activeTab == 3 ? "active" : ""} />
+        {/* Tab {activeTab} is Active */}
       </div>
     </>
   );
