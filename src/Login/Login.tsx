@@ -5,6 +5,7 @@ import InputField from "../components/UIComponents/Input/InputField";
 import Button from "../components/UIComponents/Button/Button";
 import { ButtonType } from "../components/UIComponents/Button/ButtonType";
 import Form from "../components/UIComponents/Form/Form";
+import Label from "../components/UIComponents/Label/Label";
 interface LoginFormData {
     userName: string;
     passWord: string;
@@ -44,37 +45,57 @@ const Login:React.FC=()=>{
                             <div className="p-4">
                                  <Form onSubmit={submitData}>
                                     <div className="mb-5">
-                                        <InputField
+                                        <Label className="font-medium text-gray-700 dark:text-gray-200" label="Username"/>
+                                        <div className="flex items-center mt-2 mb-3 rounded-3 bg-slate-50/50 dark:bg-transparent">
+                                            <span className="flex items-center px-4 py-2 text-gray-500 border border-r-0 border-gray-100 rounded rounded-r-none dark:border-zinc-600" id="basic-addon3">
+                                                <i className="ri-lock-2-line text-16"></i>
+                                            </span>
+
+                                            <InputField
                                                     type='text'
-                                                    label='Username'
                                                     name="userName"
                                                     placeholder='Enter Username'
-                                                    children={<i className="ri-user-2-line text-16"></i>}
                                                     value={loginFormData.userName}
                                                     onChange={handleChangeInput}
+                                                    className="w-full border-gray-100 rounded rounded-l-none placeholder:text-14 bg-slate-50/50 text-14 focus:ring-0 dark:bg-zinc-700 dark:border-zinc-600 dark:text-gray-200"
+                                                    autoComplete="off"
                                                 />
+                                        </div>
+
+                                        
 
                                       
                                     </div>
                     
                                     <div className="mb-6">
+                                           <Label className="font-medium text-gray-700 dark:text-gray-200" label="Password"/>
                                         <div className="float-right">
                                             <a href="auth-recoverpw.html" className="text-gray-500 text-13 ">Forgot password?</a>
                                         </div>
-                                        <InputField
+
+                                        <div className="flex items-center mt-2 mb-3 rounded-3 bg-slate-50/50 dark:bg-transparent">
+                                            <span className="flex items-center px-4 py-2 text-gray-500 border border-r-0 border-gray-100 rounded rounded-r-none dark:border-zinc-600" id="basic-addon3">
+                                                <i className="ri-lock-2-line text-16"></i>
+                                            </span>
+                                                <InputField
                                                     type='password'
-                                                    label='Password'
                                                     name="passWord"
                                                     placeholder='Enter Password'
-                                                    children={<i className="ri-lock-2-line text-16"></i>}
                                                     value={loginFormData.passWord}
                                                     onChange={handleChangeInput}
+                                                    className="w-full border-gray-100 rounded rounded-l-none placeholder:text-14 bg-slate-50/50 text-14 focus:ring-0 dark:bg-zinc-700 dark:border-zinc-600 dark:text-gray-200"
+                                                    autoComplete="off"
                                                 />
+                                         </div>
                                     </div>
                     
                                     <div className="flex items-center mb-6">
-                                        <input type="checkbox" className="border-gray-100 rounded focus:ring-1 checked:ring-1 focus:ring-offset-0 focus:outline-0 checked:bg-violet-500 dark:bg-zinc-600 dark:border-zinc-600 dark:checked:bg-violet-500 " id="memberCheck1"/>
-                                        <label className="font-medium text-gray-700 ltr:ml-2 rtl:mr-2 dark:text-gray-200" >Remember me</label>
+                                         <InputField
+                                             type="checkbox" 
+                                             className="border-gray-100 rounded focus:ring-1 checked:ring-1 focus:ring-offset-0 focus:outline-0 checked:bg-violet-500 dark:bg-zinc-600 dark:border-zinc-600 dark:checked:bg-violet-500 "
+                                             id="memberCheck1"
+                                         />
+                                         <Label className="font-medium text-gray-700 ltr:ml-2 rtl:mr-2 dark:text-gray-200" label="Remember me"/>
                                     </div>
                     
                                     <div className="grid">

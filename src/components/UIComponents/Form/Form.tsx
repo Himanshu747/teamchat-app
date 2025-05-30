@@ -1,13 +1,13 @@
 import React from "react";
 
-interface FormProps{
+interface FormProps extends  React.FormHTMLAttributes<HTMLFormElement>{
     onSubmit:(e:React.FormEvent<HTMLFormElement>)=>void;
     children:React.ReactNode;
 }
-const Form:React.FC<FormProps>=({onSubmit,children})=>{
+const Form:React.FC<FormProps>=({onSubmit,children,...otherAttr})=>{
     return (
         <>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} {...otherAttr}>
             {children}
         </form>
         </>
