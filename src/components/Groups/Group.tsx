@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../UIComponents/Image/Image";
+import InputField from "../UIComponents/Input/InputField";
 
 interface groupProps {
     activeTab: string;
@@ -25,34 +26,49 @@ const Group: React.FC<groupProps> = ({ activeTab }) => {
                             </div>
                         </div>
                         <h4 className="mb-6 dark:text-gray-50">Groups</h4>
+<div className="group" data-theme-color="violet">
+  <div className="py-1 mt-5 mb-5 rounded group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600">
+    <span
+      className="pe-1 ps-3 group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600"
+      id="basic-addon2"
+    >
+      <i className="text-lg text-gray-700 ri-search-line search-icon dark:text-gray-200"></i>
+    </span>
 
-                         {/* <div className="py-1 mt-5 mb-5 rounded group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600">
-                            <span className="group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600 pe-1 ps-3 " id="basic-addon2">
-                                <i className="text-lg text-gray-700 ri-search-line search-icon dark:text-gray-200"></i>
-                            </span>
-                            <input type="text" className="border-0 group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600 placeholder:text-[14px] focus:ring-offset-0 focus:outline-none focus:ring-0 dark:text-gray-400" placeholder="Search messages or users" aria-label="Search messages or users" aria-describedby="basic-addon2">
-                        </div> */}
+    <InputField
+      type="text"
+      className="border-0 group-data-[theme-color=violet]:bg-slate-100 group-data-[theme-color=green]:bg-green-50 group-data-[theme-color=red]:bg-red-50 group-data-[theme-color=violet]:dark:bg-zinc-600 group-data-[theme-color=green]:dark:bg-zinc-600 group-data-[theme-color=red]:dark:bg-zinc-600 placeholder:text-[14px] focus:ring-offset-0 focus:outline-none focus:ring-0 dark:text-gray-400"
+      placeholder="Search messages or users"
+      aria-label="Search messages or users"
+      aria-describedby="basic-addon2"
+    />
+  </div>
+</div>
+
 
                         <div className="chat-message-list chat-group-list" data-simplebar>
                         
                         
                             <ul>
-                                <li className="px-5 py-[15px] group-data-[theme-color=violet]:hover:bg-slate-100 group-data-[theme-color=green]:hover:bg-green-50/50 group-data-[theme-color=red]:hover:bg-red-50/50 group-data-[theme-color=violet]:dark:hover:bg-zinc-600 group-data-[theme-color=green]:dark:hover:bg-zinc-600 group-data-[theme-color=red]:dark:hover:bg-zinc-600 transition-all ease-in-out rounded">
-                                    <a href="#">
-                                        <div className="flex items-center">
-                                            <div className="ltr:mr-5 rtl:ml-5">
-                                                <div className="flex items-center justify-center rounded-full w-9 h-9 group-data-[theme-color=violet]:bg-violet-500/20 group-data-[theme-color=green]:bg-green-500/20 group-data-[theme-color=red]:bg-red-500/20">
-                                                    <span className="font-medium group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
-                                                        G
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="flex-grow overflow-hidden">
-                                                <h5 className="mb-0 text-gray-700 truncate text-14 dark:text-gray-50">#General</h5>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                             <li
+  className="group px-5 py-[15px] transition-all ease-in-out rounded hover:group-data-[theme-color=violet]:bg-slate-100 hover:group-data-[theme-color=green]:bg-green-50/50 hover:group-data-[theme-color=red]:bg-red-50/50 dark:hover:group-data-[theme-color=violet]:bg-zinc-600 dark:hover:group-data-[theme-color=green]:bg-zinc-600 dark:hover:group-data-[theme-color=red]:bg-zinc-600"
+  data-theme-color="violet" // Or "green" or "red"
+>
+  <a href="#">
+    <div className="flex items-center">
+      <div className="ltr:mr-5 rtl:ml-5">
+        <div className="flex items-center justify-center rounded-full w-9 h-9 group-data-[theme-color=violet]:bg-violet-500/20 group-data-[theme-color=green]:bg-green-500/20 group-data-[theme-color=red]:bg-red-500/20">
+          <span className="font-medium group-data-[theme-color=violet]:text-violet-500 group-data-[theme-color=green]:text-green-500 group-data-[theme-color=red]:text-red-500">
+            G
+          </span>
+        </div>
+      </div>
+      <div className="flex-grow overflow-hidden">
+        <h5 className="mb-0 text-gray-700 truncate text-14 dark:text-gray-50">#General</h5>
+      </div>
+    </div>
+  </a>
+</li>
                         
                                 <li className="px-5 py-[15px] group-data-[theme-color=violet]:hover:bg-slate-100 group-data-[theme-color=green]:hover:bg-green-50/50 group-data-[theme-color=red]:hover:bg-red-50/50 group-data-[theme-color=violet]:dark:hover:bg-zinc-600 group-data-[theme-color=green]:dark:hover:bg-zinc-600 group-data-[theme-color=red]:dark:hover:bg-zinc-600 transition-all ease-in-out rounded">
                                     <a href="#">
